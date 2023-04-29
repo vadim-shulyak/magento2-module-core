@@ -1,0 +1,26 @@
+{
+    "name": "enjoydevelop/core",
+    "description": "EnjoyDevelop Core",
+    "type": "magento2-module",
+    "license": "NONE",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Vadym Shuliak",
+            "email": "vadim.shulyak.1992@gmail.com",
+            "homepage": "https://enjoydevelop.com"
+        }
+    ],
+    "require": {
+        "php": "~7.4.0||~8.1.0",
+        "magento/framework": "103.0.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "EnjoyDevelop\\Core\\": ""
+        }
+    }
+}

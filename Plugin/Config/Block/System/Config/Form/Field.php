@@ -38,7 +38,7 @@ class Field
             $html = $this->replaceString($html);
         }
 
-        $elementTooltip = $element->getTooltip();
+        $elementTooltip = (string)$element->getTooltip();
         if ($elementTooltip) {
             $elementTooltip = $this->replaceString($elementTooltip);
             $element->setTooltip($elementTooltip);
@@ -50,13 +50,11 @@ class Field
     /**
      * Replace String - to allow using of the EnjoyDevelop images in tooltips
      *
-     * @param mixed $content
+     * @param string $content
      * @return string
      */
-    private function replaceString(mixed $content): string
+    private function replaceString(string $content): string
     {
-        $content = (string)$content;
-
         preg_match('/<img.*?src="(EnjoyDevelop.*?)"/', $content, $result);
         if (count($result) >= 2) {
             $path = $result[1];
